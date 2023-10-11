@@ -3,8 +3,6 @@
 # @YouTube:  https://youtube.com/c/CodingIsFun
 # @Project:  Sales Dashboard w/ Streamlit
 
-
-
 import pandas as pd  # pip install pandas openpyxl
 import plotly.express as px  # pip install plotly-express
 import streamlit as st  # pip install streamlit
@@ -26,7 +24,7 @@ def get_data_from_excel():
     # Add 'hour' column to dataframe
     df["hour"] = pd.to_datetime(df["Time"], format="%H:%M:%S").dt.hour
     return df
-
+server= app.server
 df = get_data_from_excel()
 
 # ---- SIDEBAR ----
